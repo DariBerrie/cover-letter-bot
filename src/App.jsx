@@ -8,7 +8,7 @@ import '/App.scss'
 
 const App = () => {
   const configuration = new Configuration({
-    apiKey: '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'
+    apiKey: import.meta.env.VITE_OPENAI_API_KEY
   })
   const openai = new OpenAIApi(configuration)
   const [promptInput, setPromptInput] = useState("")
