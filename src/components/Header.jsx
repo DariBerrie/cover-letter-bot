@@ -10,7 +10,8 @@ const Header = () => {
       strings: [
         '<h1>cover • letter • bot</h1>'
       ],
-      typeSpeed: 50
+      typeSpeed: 50,
+      showCursor: false
     }
 
     typed.current = new Typed(el.current, options)
@@ -21,7 +22,7 @@ const Header = () => {
   }, [])
 
   return (
-    <span style={{ whiteSpace: 'pre' }} ref={el} />
+    <span style={{ whiteSpace: 'normal' }} ref={el} />
   )
 }
 
