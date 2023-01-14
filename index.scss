@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  h1, h2, h3 {
+    font-family: 'Judson', serif;
+  }
+
+  h1 {
+    font-size: 5em;
+    margin: 0;
+  }
+
+  h4, h5 , p {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  .container {
+    margin: 5em 5em;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
