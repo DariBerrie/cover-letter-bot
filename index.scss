@@ -16,14 +16,19 @@ body {
   }
 
   p {
-    font-size: 1.5em;
+    font-size: 1.35em;
+
   }
 
   .container {
+    position: relative;
     width: 100vw;
-    height: 100vh;
-    margin: 2em 5em;
+    min-height: 100vh;
+    padding: 2em 1em .5em 1em;
+    display: flex;
+    flex-direction: column;
   }
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -35,20 +35,18 @@ const App = () => {
       setLoading(false)}, 4000)
   }
 
-  const onSubmit = (e) => {
-    e.preventDefault()
-  }
+  // const onSubmit = (e) => {
+  //   e.preventDefault()
+  // }
 
   return (
-    <div className="container d-flex flex-column align-items-center justify-content-center">
+    <div className="container d-flex flex-column align-items-center">
         <div className="headerContainer">
           <img src="/bot.png" style={{width:"100px", height:"100px"}} alt="bot icon"/>
           <Header />
-          <p className="text-center">If the robots are taking over, I say, <b>let them!</b> Recruiters admit, their robots will do a first scan of your CV and cover letter before they do.
+          <p className="intro text-center">If the robots are taking over, I say, <b>let them!</b> Recruiters admit, their robots will do a first scan of your CV and cover letter before they do.
           So why not generate a cover letter for a robot written by a robot! Give it a go 😉 </p>
         </div>
-
-
 
           <form className="formContainer" onSubmit = {fetchResponse}>
             <div className="formInputRow">
@@ -89,20 +87,19 @@ const App = () => {
         <div className="pt-5">
           {
             loading ? (
-            <ClockLoader
-              size={40}
-              color={'black'}
-              loading={loading}
-          />):
+              <div>
+                <p className="text-center fs-6">* This app was created for fun.
+                Please don't use this for your actual cover letters unless you like the content! 🤖<br />
+                </p>
+                <ClockLoader
+                  size={40}
+                  color={'black'}
+                  loading={loading}/>
+          </div>):
           (<p>{result}</p>)
           }
         </div>
-
-        <div className="disclaimer py-5">
-          <p className="text-center fs-6">* This app was created for fun. Please don't use this for your actual cover letters unless you like the content! 🤖<br />
-          If you like this, check out <a href="https://www.dari.codes">my portfolio</a>!</p>
-        </div>
-        <p className="fs-6 text-center">Built by me with
+        <p className="footer fs-6 text-center">Built by <a href="https://www.dari.codes">me</a> with
           <span style={{color: '#2FD2F2'}}> ♥</span>, React, Node.js & <a href="https://beta.openai.com/">OpenAI</a>.</p>
     </div>
   )

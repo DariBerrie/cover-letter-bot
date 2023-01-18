@@ -22,7 +22,9 @@ const Header = () => {
   }, [])
 
   return (
-    <span style={{ whiteSpace: 'normal' }} ref={el} />
+    <div className="typed-header">
+      <span style={{ whiteSpace: 'normal', textAlign: 'center' }} ref={el} />
+    </div>
   )
 }
 
