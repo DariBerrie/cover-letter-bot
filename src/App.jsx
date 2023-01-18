@@ -99,7 +99,7 @@ const App = () => {
           (<p>{result}</p>)
           }
         </div>
-        <p className="footer fs-6 text-center">Built by <a href="https://www.dari.codes">me</a> with
+        <p className="footer fs-6 text-center">Built by <a href="https://www.dari.codes">Dari</a> with
           <span style={{color: '#2FD2F2'}}> ♥</span>, React, Node.js & <a href="https://beta.openai.com/">OpenAI</a>.</p>
     </div>
   )
