@@ -33,6 +33,7 @@ const App = () => {
     setTimeout(() => {
       setResult(response.data.choices[0].text)
       setLoading(false)}, 4000)
+      console.log(response)
   }
 
   // const onSubmit = (e) => {
@@ -84,10 +85,10 @@ const App = () => {
             />
           </form>
 
-        <div className="pt-5">
+        <div className="pt-2">
           {
             loading ? (
-              <div>
+              <div className="d-flex flex-column align-items-center">
                 <p className="text-center fs-6">* This app was created for fun.
                 Please don't use this for your actual cover letters unless you like the content! 🤖<br />
                 </p>
@@ -96,7 +97,7 @@ const App = () => {
                   color={'black'}
                   loading={loading}/>
           </div>):
-          (<p>{result}</p>)
+          (<p className="mb-4"><span style={{whiteSpace: 'pre-line'}}>{result}</span></p>)
           }
         </div>
         <p className="footer fs-6 text-center">Built by <a href="https://www.dari.codes">Dari</a> with
