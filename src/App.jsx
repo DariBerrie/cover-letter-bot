@@ -80,7 +80,7 @@ const App = () => {
                 onChange={(e) => setCompany(e.target.value)}
               />
             </div>
-            <input className="btn-info" type="submit" value="Generate letter"
+            <input className="btn-info mx-0" type="submit" value="Generate letter"
               onClick={(e) => setPromptInput(`Write a 200-word or less cover letter for a ${oneWordDesc} ${currentJob} who is applying to a ${futureJob} posiiton at ${company}.`)}
             />
           </form>
