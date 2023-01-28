@@ -27,7 +27,7 @@ const App = () => {
       model: "text-davinci-003",
       prompt: promptInput,
       temperature: 0.8,
-      max_tokens: 50,
+      max_tokens: 400,
     }
 
     const response = await openai.createCompletion(object)
