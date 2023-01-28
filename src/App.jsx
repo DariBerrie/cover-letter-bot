@@ -2,9 +2,9 @@ import { Configuration, OpenAIApi } from 'openai'
 import { useState } from 'react'
 import Header from './components/Header'
 import { ClockLoader } from 'react-spinners'
-import './stylesheets/PromptForm.scss'
+import QuillComponent from './components/QuillComponent'
+import 'react-quill/dist/quill.bubble.css'
 import '/App.scss'
-
 
 const App = () => {
   const configuration = new Configuration({
@@ -19,6 +19,7 @@ const App = () => {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState("")
 
+
   const fetchResponse = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -26,14 +27,14 @@ const App = () => {
       model: "text-davinci-003",
       prompt: promptInput,
       temperature: 0.8,
-      max_tokens: 400,
+      max_tokens: 50,
     }
 
     const response = await openai.createCompletion(object)
     setTimeout(() => {
       setResult(response.data.choices[0].text)
       setLoading(false)}, 4000)
-      console.log(response)
+      console.log(response.data.choices[0])
   }
 
   // const onSubmit = (e) => {
@@ -97,7 +98,7 @@ const App = () => {
                   color={'black'}
                   loading={loading}/>
           </div>):
-          (<p className="mb-4"><span style={{whiteSpace: 'pre-line'}}>{result}</span></p>)
+          (<QuillComponent result={result} />)
           }
         </div>
         <p className="footer fs-6 text-center">Built by <a href="https://www.dari.codes">Dari</a> with
