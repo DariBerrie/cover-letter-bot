@@ -56,6 +56,7 @@ const App = () => {
                 type="text"
                 name="oneWordDescription"
                 placeholder="Write one word that describes you."
+                required pattern="/[a-zA-Z]/"
                 value={oneWordDesc}
                 onChange={(e) => setOneWordDesc(e.target.value)}
               />
@@ -63,6 +64,7 @@ const App = () => {
                 type="text"
                 name="currentPosition"
                 placeholder="What is your current position?"
+                required pattern="/[a-zA-Z]/"
                 value={currentJob}
                 onChange={(e) => setCurrentJob(e.target.value)}
               />
@@ -70,6 +72,7 @@ const App = () => {
                 type="text"
                 name="futurePosiiton"
                 placeholder="What job title are you applying to?"
+                required pattern="/[a-zA-Z]/"
                 value={futureJob}
                 onChange={(e) => setFutureJob(e.target.value)}
               />
@@ -77,6 +80,7 @@ const App = () => {
                 type="text"
                 name="company"
                 placeholder="With which company?"
+                required pattern="/[a-zA-Z]/"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
               />
