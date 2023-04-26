@@ -34,7 +34,6 @@ const App = () => {
     setTimeout(() => {
       setResult(response.data.choices[0].text)
       setLoading(false)}, 4000)
-      console.log(response.data.choices[0])
   }
 
   // const onSubmit = (e) => {
@@ -56,7 +55,8 @@ const App = () => {
                 type="text"
                 name="oneWordDescription"
                 placeholder="Write one word that describes you."
-                required pattern="/[a-zA-Z]/"
+                pattern="[a-zA-Z\s]+"
+                title="This field can only contain alphabetical characters."
                 value={oneWordDesc}
                 onChange={(e) => setOneWordDesc(e.target.value)}
               />
@@ -64,7 +64,8 @@ const App = () => {
                 type="text"
                 name="currentPosition"
                 placeholder="What is your current position?"
-                required pattern="/[a-zA-Z]/"
+                pattern="[a-zA-Z\s]+"
+                title="This field can only contain alphabetiacl characters."
                 value={currentJob}
                 onChange={(e) => setCurrentJob(e.target.value)}
               />
@@ -72,7 +73,8 @@ const App = () => {
                 type="text"
                 name="futurePosiiton"
                 placeholder="What job title are you applying to?"
-                required pattern="/[a-zA-Z]/"
+                pattern="[a-zA-Z\s]+"
+                title="This field can only contain alphabetical characters."
                 value={futureJob}
                 onChange={(e) => setFutureJob(e.target.value)}
               />
@@ -80,7 +82,8 @@ const App = () => {
                 type="text"
                 name="company"
                 placeholder="With which company?"
-                required pattern="/[a-zA-Z]/"
+                pattern="[a-zA-Z\s]+"
+                title="This field can only contain alphabetical characters."
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
               />
